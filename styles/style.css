@@ -1,0 +1,37 @@
+:root {
+    font-family: "Merriweather";
+}
+  
+.figure__container {
+    display: inline-block;
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.figure__container img {
+    position: absolute;
+    left: -0%;
+    top: -70px;
+}
+
+.figure {
+    text-align: center;
+}
+
+.figure__title {
+    display: inline-block;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: capitalize;
+}
+
+.section {
+    text-align: center;
+}
