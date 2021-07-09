@@ -1,37 +1,70 @@
 :root {
-    font-family: "Merriweather";
+  font-family: "Merriweather";
 }
-  
-.figure__container {
-    display: inline-block;
-    border-radius: 50%;
-    width: 450px;
-    height: 450px;
-    overflow: hidden;
 
-    position: relative;
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.section {
+  position: relative;
+}
+
+.section__figure {
+  text-align: center;
+}
+
+.figure__container {
+  display: inline-block;
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+
+  position: relative;
 }
 
 .figure__container img {
-    position: absolute;
-    left: -0%;
-    top: -70px;
-}
-
-.figure {
-    text-align: center;
+  position: absolute;
+  left: -0%;
+  top: -70px;
 }
 
 .figure__title {
-    display: inline-block;
+  display: inline-block;
 }
 
 h1,
 h2,
 h3 {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
-.section {
-    text-align: center;
+.section__div {
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+}
+
+.div__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.div__list li:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+a {
+  color: darkgrey;
 }
