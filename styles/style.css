@@ -68,3 +68,16 @@ h3 {
 a {
   color: darkgrey;
 }
+
+.a__figure {
+  display: inline-block;
+  margin: 5px;
+}
+
+.figure__icon {
+  filter: grayscale(100%);
+}
+
+.figure__icon img {
+  border-radius: 20%;
+}
