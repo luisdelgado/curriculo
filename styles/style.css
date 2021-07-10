@@ -2,11 +2,13 @@
   font-family: "Merriweather";
 }
 
+/* Grid */
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
+/* Grid mobile */
 @media (max-width: 1000px) {
   .wrapper {
     display: grid;
@@ -14,14 +16,16 @@
   }
 }
 
-.section {
+.wrapper__section {
   position: relative;
+  margin: auto;
 }
 
 .section__figure {
   text-align: center;
 }
 
+/* Título */
 .figure__container {
   display: inline-block;
   border-radius: 50%;
@@ -43,15 +47,12 @@
 }
 
 h1,
-h2,
-h3 {
+h2 {
   text-transform: capitalize;
 }
 
 .section__div {
   width: 100%;
-  position: absolute;
-  top: 30%;
   text-align: center;
 }
 
@@ -69,6 +70,7 @@ a {
   color: darkgrey;
 }
 
+/* Redes */
 .a__figure {
   display: inline-block;
   margin: 5px;
