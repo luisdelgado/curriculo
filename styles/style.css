@@ -86,6 +86,11 @@ span {
 }
 
 /* Formação */
+article .wrapper:not(:first-child) {
+  margin-top: 5px;
+  border-top: darkgrey solid 1px;
+}
+
 h5 {
   margin-bottom: 5px;
   margin-bottom: 5px;
