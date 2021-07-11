@@ -5,13 +5,15 @@
 /* Grid */
 .wrapper {
   display: grid;
+}
+
+.wrapper--twoColumns {
   grid-template-columns: 1fr 1fr;
 }
 
 /* Grid mobile */
 @media (max-width: 1000px) {
-  .wrapper {
-    display: grid;
+  .wrapper--twoColumns {
     grid-template-columns: 1fr;
   }
 }
@@ -71,6 +73,18 @@ span {
   color: darkgrey;
 }
 
+/* Perfil */
+.div__p {
+  padding: 0px 64px;
+  text-align: justify;
+}
+
+@media (max-width: 1000px) {
+  .div__p {
+    text-align: left;
+  }
+}
+
 /* Redes */
 .a__figure {
   display: inline-block;
@@ -87,7 +101,7 @@ span {
 
 /* Formação */
 article .wrapper:not(:first-child) {
-  margin-top: 5px;
+  margin-top: 15px;
   border-top: darkgrey solid 1px;
 }
 
@@ -98,4 +112,16 @@ h5 {
 
 span {
   font-size: smaller;
+}
+
+/* Perfil */
+.wrapper--threeColumns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Grid mobile */
+@media (max-width: 1000px) {
+  .wrapper--threeColumns {
+    grid-template-columns: 1fr;
+  }
 }
