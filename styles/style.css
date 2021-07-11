@@ -18,7 +18,7 @@
   }
 }
 
-.wrapper__section {
+.block {
   position: relative;
   margin: auto;
 }
@@ -100,7 +100,7 @@ span {
 }
 
 /* Formação */
-article .wrapper:not(:first-child) {
+article > :not(:first-child) {
   margin-top: 15px;
   border-top: darkgrey solid 1px;
 }
@@ -114,7 +114,11 @@ span {
   font-size: smaller;
 }
 
-/* Perfil */
+/* Experiência */
+.section {
+  padding-left: 128px;
+}
+
 .wrapper--threeColumns {
   grid-template-columns: 1fr 1fr 1fr;
 }
