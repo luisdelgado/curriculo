@@ -125,7 +125,17 @@ span {
 
 /* Grid mobile */
 @media (max-width: 1000px) {
+  .section {
+    padding-left: 0;
+    text-align: center;
+  }
+
   .wrapper--threeColumns {
     grid-template-columns: 1fr;
   }
+}
+
+.block__div {
+  box-shadow: 0px 0px 20px 20px aliceblue;
+  width: 288px;
 }
