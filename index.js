@@ -19,6 +19,24 @@ for (element of educationDatabase) {
     </li>`;
 }
 
+// Experiência profissional
+const experience = {
+  image: "",
+  title: "",
+  period: "",
+  description: "",
+};
+const experienceDatabase = [experience];
+var experienceHTML = document.getElementById("experience");
+for (element of experienceDatabase) {
+  experienceHTML.innerHTML = `${experienceHTML.innerHTML}
+    <li>
+        <img src="${element.image}" alt="${element.title}" style="width:100%">
+        <h5>${element.title}</h5>
+        <span>${element.period}</span>
+    </li>`;
+}
+
 // Projetos
 const project = {
   image: "assets/saude.png",
