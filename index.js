@@ -1,3 +1,24 @@
+// Formação acadêmica
+const education = {
+  title: "Pós-graduando em Design de Interação para Artefatos Digitais",
+  institution: "CESAR School",
+  period: "2020 - 2022",
+};
+const education2 = {
+  title: "Graduado em Ciência da Computação",
+  institution: "Universidade Federal de Pernambuco",
+  period: "2012 - 2018",
+};
+const educationDatabase = [education, education2];
+var educationHTML = document.getElementById("education");
+for (element of educationDatabase) {
+  educationHTML.innerHTML = `${educationHTML.innerHTML}
+    <li>
+        <h5>${element.title}</h5>
+        <span>${element.institution} (${element.period})</span>
+    </li>`;
+}
+
 // Projetos
 const project = {
   image: "assets/saude.png",
