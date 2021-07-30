@@ -21,19 +21,19 @@ const project3 = {
 };
 const projectsDatabase = [project, project2, project3];
 var projectsHTML = document.getElementById("project");
-projectsDatabase.forEach((project) => {
+for (element of projectsDatabase) {
   projectsHTML.innerHTML = `${projectsHTML.innerHTML}
     <div class="wrapper__div">
-    <div class="div--block">
-        <img src="${project.image}" alt="${project.title}" style="width:100%">
-        <div class="block__container">
-            <h4><b>${project.title}</b></h4> 
-            ${project.subtitle ? `<h5><b>${project.subtitle}</b></h5>` : ""} 
-            <p>${project.description}</p> 
-        </div>
-    </div>
-</div>`;
-});
+      <div class="div--block">
+          <img src="${element.image}" alt="${element.title}" style="width:100%">
+          <div class="block__container">
+              <h4><b>${element.title}</b></h4> 
+              ${element.subtitle ? `<h5><b>${element.subtitle}</b></h5>` : ""} 
+              <p>${element.description}</p> 
+          </div>
+      </div>
+    </div>`;
+}
 
 // Hobbies
 // Filmes
