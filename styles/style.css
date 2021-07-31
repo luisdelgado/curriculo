@@ -58,6 +58,10 @@ h2 {
   text-align: center;
 }
 
+.divCenter__a {
+  font-size: smaller;
+}
+
 .div__list {
   list-style-type: none;
   margin: 0;

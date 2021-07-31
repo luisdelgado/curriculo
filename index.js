@@ -3,11 +3,17 @@ const education = {
   title: "Pós-graduando em Design de Interação para Artefatos Digitais",
   institution: "CESAR School",
   period: "2020 - 2022",
+  project:
+    "Design Thinking e Frevo: O uso de uma abordagem de Design para a construção de website comemorativo dos 100 anos do Cariri Olindense durante a pandemia do Coronavírus",
+  url: "",
 };
 const education2 = {
   title: "Graduado em Ciência da Computação",
   institution: "Universidade Federal de Pernambuco",
   period: "2012 - 2018",
+  project:
+    "Relevância Prática de Fatores que Contribuem para Conflito de Merge",
+  url: "https://www.cin.ufpe.br/~tg/2018-2/",
 };
 const educationDatabase = [education, education2];
 var educationHTML = document.getElementById("education");
@@ -15,13 +21,18 @@ for (element of educationDatabase) {
   educationHTML.innerHTML = `${educationHTML.innerHTML}
     <li>
         <h5>${element.title}</h5>
-        <span>${element.institution} (${element.period})</span>
+        <span>${element.institution} (${element.period})</span><br>
+        <span>TCC: </span>${
+          element.url
+            ? `<a class="divCenter__a" href="${element.url}" target="_blank">${element.project}</a>`
+            : `<span>${element.project}</span>`
+        }
     </li>`;
 }
 
 // Experiência profissional
 const experience = {
-  image: "assets/isi.jpg",
+  image: "assets/image/isi.jpg",
   institution:
     "Instituto SENAI de Inovação para Tecnologias da Informação e Comunicação (ISI-TICs)",
   job: "Desenvolvedor de Inovação e Tecnologia",
@@ -49,20 +60,20 @@ for (element of experienceDatabase) {
 
 // Projetos
 const project = {
-  image: "assets/saude.png",
+  image: "assets/image/saude.png",
   title: "Saúde 10 Anos no Futuro",
   subtitle: "Onde estamos e onde podemos ir",
   description:
     "Foi um trabalho de Foresight Thinking desenvolvido na disciplina Pensando Empreendimentos no Futuro em 2018. Coletar sinais, reunir tendências, fazer previsões, criar possibilidades de cenários, construir personas e...",
 };
 const project2 = {
-  image: "assets/acidentesTransitoRecife.png",
+  image: "assets/image/acidentesTransitoRecife.png",
   title: "Acidentes de Trânsito no Recife",
   description:
     "Foi o projeto para a disciplina de Visualização de Dados em 2017. Colocamos em prática conceitos vistos em sala de aula. Para isso utilizamos bases de dados abertas disponíveis pela prefeitura do Recife dos acidentes de trânsito de recife nos anos de 2015 e 2016. Utilizando a biblioteca D3 em JavaScript fiz o histograma.",
 };
 const project3 = {
-  image: "assets/cariri.png",
+  image: "assets/image/cariri.png",
   title: "TCM Cariri Olindense",
   subtitle: "Landing page",
   description:
