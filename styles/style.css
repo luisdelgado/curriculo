@@ -135,7 +135,8 @@ span {
   width: 80%;
 }
 
-.div--card:hover {
+.div--card:hover,
+.div--cardSmall:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
