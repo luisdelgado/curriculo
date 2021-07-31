@@ -21,19 +21,29 @@ for (element of educationDatabase) {
 
 // Experiência profissional
 const experience = {
-  image: "",
-  title: "",
-  period: "",
-  description: "",
+  image: "assets/isi.jpg",
+  institution:
+    "Instituto SENAI de Inovação para Tecnologias da Informação e Comunicação (ISI-TICs)",
+  job: "Desenvolvedor de Inovação e Tecnologia",
+  period: "2019 - presente",
+  description:
+    "Principais atividades: dentre as atividades, destacam-se o desenvolvimento front-end, engenharia de softwares/sistemas e UX designer voltado para a Indústria 4.0 em âmbito nacional. O que possibilitou o estudo/utilização de técnicas e tecnologias como Angular 8, 7, Bootstrap, Angular Material, HTML, CSS, TypeScript, MVW, Git, GitHub, Kanban, Scrum, Jira, Next.js, Material-UI, styled-components, JavaScript, Jest, D3.js, React Leaflet, Formik, Bitbucket, Java, OpenLayers, OpenStreetMaps, redimensionamento de imagens, máscaras, Moment.js, Chart.js, criação de tema com paleta de cores, análise de PM Canvas, preenchimento de Matriz CSD, Pesquisa de Benchmark, entrevistas com stakeholders, preenchimento de Mapa de Empatia, elaboração de Big Picture, User Story Map, definição de requisitos do sistema, PostgreSQL, Postman, Spring Boot, Jenkins, Maven, CRUD, MVC, gerenciamento de projeto, Phaser Game 3, MongoDB.",
 };
 const experienceDatabase = [experience];
 var experienceHTML = document.getElementById("experience");
 for (element of experienceDatabase) {
   experienceHTML.innerHTML = `${experienceHTML.innerHTML}
     <li>
-        <img src="${element.image}" alt="${element.title}" style="width:100%">
-        <h5>${element.title}</h5>
-        <span>${element.period}</span>
+        <div class="wrapper wrapper--twoColumns wrapper__div div--block">
+          <div>
+            <img src="${element.image}" alt="${element.institution}" style="width:85%; padding: 15px 15px; border-radius: 20px">
+          </div>
+          <div class="block__container">
+            <h3>${element.institution}</h3>
+            <h4>${element.job} <span>(${element.period})</span></h4>
+            <p>${element.description}</p>
+          </div>
+        </div>
     </li>`;
 }
 
@@ -62,14 +72,12 @@ const projectsDatabase = [project, project2, project3];
 var projectsHTML = document.getElementById("project");
 for (element of projectsDatabase) {
   projectsHTML.innerHTML = `${projectsHTML.innerHTML}
-    <div class="wrapper__div">
-      <div class="div--block">
-          <img src="${element.image}" alt="${element.title}" style="width:100%">
-          <div class="block__container">
-              <h4><b>${element.title}</b></h4> 
-              ${element.subtitle ? `<h5><b>${element.subtitle}</b></h5>` : ""} 
-              <p>${element.description}</p> 
-          </div>
+    <div class="wrapper__div div--blockSmall">
+      <img src="${element.image}" alt="${element.title}" style="width:100%">
+      <div class="block__container">
+          <h4><b>${element.title}</b></h4> 
+          ${element.subtitle ? `<h5><b>${element.subtitle}</b></h5>` : ""} 
+          <p>${element.description}</p> 
       </div>
     </div>`;
 }

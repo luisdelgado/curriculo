@@ -119,6 +119,27 @@ span {
   padding-left: 128px;
 }
 
+.wrapper__div {
+  position: relative;
+  margin: 16px auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.div--block {
+  width: 80%;
+}
+
+.div--block:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.block__container {
+  padding: 2px 16px;
+}
+
+/* Projeto */
 .wrapper--threeColumns {
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -139,27 +160,8 @@ span {
   }
 }
 
-.wrapper__div {
-  position: relative;
-  margin: 16px auto;
-  border-radius: 20px;
-}
-
-.div--block {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+.div--blockSmall {
   width: 288px;
   min-height: 430px;
   overflow-y: hidden;
-  border-bottom-left-radius: 20px;
-  border-bottom: transparent solid 10px;
-  border-bottom-right-radius: 20px;
-}
-
-.div--block:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.block__container {
-  padding: 2px 16px;
 }
