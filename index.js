@@ -34,11 +34,11 @@ var experienceHTML = document.getElementById("experience");
 for (element of experienceDatabase) {
   experienceHTML.innerHTML = `${experienceHTML.innerHTML}
     <li>
-        <div class="wrapper wrapper--twoColumns wrapper__div div--block">
-          <div>
+        <div class="wrapper wrapper--twoColumns wrapper__div div--card">
+          <div class="divCenter">
             <img src="${element.image}" alt="${element.institution}" style="width:85%; padding: 15px 15px; border-radius: 20px">
           </div>
-          <div class="block__container">
+          <div class="card__container">
             <h3>${element.institution}</h3>
             <h4>${element.job} <span>(${element.period})</span></h4>
             <p>${element.description}</p>
@@ -72,9 +72,9 @@ const projectsDatabase = [project, project2, project3];
 var projectsHTML = document.getElementById("project");
 for (element of projectsDatabase) {
   projectsHTML.innerHTML = `${projectsHTML.innerHTML}
-    <div class="wrapper__div div--blockSmall">
+    <div class="wrapper__div div--cardSmall">
       <img src="${element.image}" alt="${element.title}" style="width:100%">
-      <div class="block__container">
+      <div class="card__container">
           <h4><b>${element.title}</b></h4> 
           ${element.subtitle ? `<h5><b>${element.subtitle}</b></h5>` : ""} 
           <p>${element.description}</p> 
