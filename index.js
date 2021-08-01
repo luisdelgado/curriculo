@@ -5,7 +5,7 @@ const education = {
   period: "2020 - 2022",
   project:
     "Design Thinking e Frevo: O uso de uma abordagem de Design para a construção de website comemorativo dos 100 anos do Cariri Olindense durante a pandemia do Coronavírus",
-  url: "",
+  URL: "",
 };
 const education2 = {
   title: "Graduado em Ciência da Computação",
@@ -13,7 +13,7 @@ const education2 = {
   period: "2012 - 2018",
   project:
     "Relevância Prática de Fatores que Contribuem para Conflito de Merge",
-  url: "https://www.cin.ufpe.br/~tg/2018-2/",
+  URL: "https://www.cin.ufpe.br/~tg/2018-2/",
 };
 const educationDatabase = [education, education2];
 var educationHTML = document.getElementById("education");
@@ -23,8 +23,8 @@ for (element of educationDatabase) {
         <h5>${element.title}</h5>
         <span>${element.institution} (${element.period})</span><br>
         ${
-          element.url
-            ? `<a class="divCenter__a" href="${element.url}" target="_blank"><i>${element.project}</i></a>`
+          element.URL
+            ? `<a class="divCenter__a" href="${element.URL}" target="_blank"><i>${element.project}</i></a>`
             : `<span><i>${element.project}</i></span>`
         }
     </li>`;
@@ -39,13 +39,14 @@ const experience = {
   period: "2019 - presente",
   description:
     "Principais atividades: dentre as atividades, destacam-se o desenvolvimento front-end, engenharia de softwares/sistemas e UX designer voltado para a Indústria 4.0 em âmbito nacional. O que possibilitou o estudo/utilização de técnicas e tecnologias como Angular 8, 7, Bootstrap, Angular Material, HTML, CSS, TypeScript, MVW, Git, GitHub, Kanban, Scrum, Jira, Next.js, Material-UI, styled-components, JavaScript, Jest, D3.js, React Leaflet, Formik, Bitbucket, Java, OpenLayers, OpenStreetMaps, redimensionamento de imagens, máscaras, Moment.js, Chart.js, criação de tema com paleta de cores, análise de PM Canvas, preenchimento de Matriz CSD, Pesquisa de Benchmark, entrevistas com stakeholders, preenchimento de Mapa de Empatia, elaboração de Big Picture, User Story Map, definição de requisitos do sistema, PostgreSQL, Postman, Spring Boot, Jenkins, Maven, CRUD, MVC, gerenciamento de projeto, Phaser Game 3, MongoDB.",
+  URL: "https://www.pe.senai.br/isi-tics/",
 };
 const experienceDatabase = [experience];
 var experienceHTML = document.getElementById("experience");
 for (element of experienceDatabase) {
   experienceHTML.innerHTML = `${experienceHTML.innerHTML}
     <li>
-        <div class="wrapper wrapper--twoColumns wrapper__div div--card">
+        <div class="wrapper wrapper--twoColumns wrapper__div div--card" >
           <div class="divCenter">
             <img src="${element.image}" alt="${element.institution}" style="width:85%; padding: 15px 15px; border-radius: 20px">
           </div>
