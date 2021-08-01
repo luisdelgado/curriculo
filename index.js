@@ -41,14 +41,39 @@ const experience = {
     "Principais atividades: dentre as atividades, destacam-se o desenvolvimento front-end, engenharia de softwares/sistemas e UX designer voltado para a Indústria 4.0 em âmbito nacional. O que possibilitou o estudo/utilização de técnicas e tecnologias como Angular 8, 7, Bootstrap, Angular Material, HTML, CSS, TypeScript, MVW, Git, GitHub, Kanban, Scrum, Jira, Next.js, Material-UI, styled-components, JavaScript, Jest, D3.js, React Leaflet, Formik, Bitbucket, Java, OpenLayers, OpenStreetMaps, redimensionamento de imagens, máscaras, Moment.js, Chart.js, criação de tema com paleta de cores, análise de PM Canvas, preenchimento de Matriz CSD, Pesquisa de Benchmark, entrevistas com stakeholders, preenchimento de Mapa de Empatia, elaboração de Big Picture, User Story Map, definição de requisitos do sistema, PostgreSQL, Postman, Spring Boot, Jenkins, Maven, CRUD, MVC, gerenciamento de projeto, Phaser Game 3, MongoDB.",
   URL: "https://www.pe.senai.br/isi-tics/",
 };
-const experienceDatabase = [experience];
+const experience2 = {
+  image: "assets/image/navegue.png",
+  institution: "Navegue",
+  job: "Cofundador e Desenvolvedor",
+  period: "2019 - presente",
+  description:
+    "Principais atividades: desenvolver soluções que possibilitam melhor visualização de dados, principalmente, sobre pesquisas de origem e destino do Recife, desenvolver site, duas versões do MVP para Android e um sistema web. O que possibilitou o estudo/utilização de técnicas e tecnologias como Java, Angular 8, Bootstrap, Angular Material, HTML, CSS, TypeScript, MVW, Git, GitHub, Kanban, Netlify, definição do escopo do MVP, criação de histórias do usuário, Bitbucket, implantar cultura de design thinking, projetar protótipos de baixa fidelidade, mockups, Postman, modelagem de dados, elaboração de histórias de usuário, Firebase, Python.",
+  URL: "https://navegue.app/",
+};
+const experience3 = {
+  image: "assets/image/biciflow.jpg",
+  institution: "Biciflow",
+  job: "Cofundador, Gerente de Projeto e COO",
+  period: "2016 - presente",
+  description:
+    "Principais atividades: desenvolvimento de sistema web, difundir e atualizar processos que visam uma melhor organização da empresa (ex: OKRs, jornada do usuário, dimensionamento de mercado: TAM, SAM, SOM; Kanban, Scrum, aprimoramento da cultura de bons feedbacks), gerenciar mídias sociais, coordenar o desenvolvimento do projeto Aplicativo Biciflow no qual eu era o responsável direto da primeira metade de execução, representar a startup, promover o networking da instituição com públicos relacionados, lidar com apoiadores visando um melhor relacionamento diante das parcerias firmadas, desenvolvimento front-end do sistema web de criação rotas interativas, criação da página web, gerenciamento e desenvolvimento da versão inicial Android do app, análise de concorrentes e elaboração de modelo de negócios, utilização de técnicas de design thinking e lean para transformação de uma ideia até um produto.",
+  URL: "https://www.instagram.com/biciflowapp/",
+};
+
+const experienceDatabase = [experience, experience2, experience3];
 var experienceHTML = document.getElementById("experience");
+
+// Redirecionar para site
+function redirect(URL) {
+  window.open(URL, "_blank");
+}
+
 for (element of experienceDatabase) {
   experienceHTML.innerHTML = `${experienceHTML.innerHTML}
     <li>
-        <div class="wrapper wrapper--twoColumns wrapper__div div--card" >
-          <div class="divCenter">
-            <img src="${element.image}" alt="${element.institution}" style="width:85%; padding: 15px 15px; border-radius: 20px">
+        <div class="wrapper wrapper--twoColumns wrapper__div div--card" onClick="redirect('${element.URL}')">
+          <div class="divCenter div--image">
+            <img src="${element.image}" alt="${element.institution}" style="width:calc(${element.description.length} * 0.093897%); border-radius: 20px;">
           </div>
           <div class="card__container">
             <h3>${element.institution}</h3>
