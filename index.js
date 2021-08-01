@@ -32,7 +32,7 @@ for (element of educationDatabase) {
 
 // Experiência profissional
 const experience = {
-  image: "assets/image/isi.jpg",
+  image: "assets/images/isi.jpg",
   institution:
     "Instituto SENAI de Inovação para Tecnologias da Informação e Comunicação (ISI-TICs)",
   job: "Desenvolvedor de Inovação e Tecnologia",
@@ -42,7 +42,7 @@ const experience = {
   URL: "https://www.pe.senai.br/isi-tics/",
 };
 const experience2 = {
-  image: "assets/image/navegue.png",
+  image: "assets/images/navegue.png",
   institution: "Navegue",
   job: "Cofundador e Desenvolvedor",
   period: "2019 - presente",
@@ -51,7 +51,7 @@ const experience2 = {
   URL: "https://navegue.app/",
 };
 const experience3 = {
-  image: "assets/image/biciflow.jpg",
+  image: "assets/images/biciflow.jpg",
   institution: "Biciflow",
   job: "Cofundador, Gerente de Projeto e COO",
   period: "2016 - presente",
@@ -86,24 +86,27 @@ for (element of experienceDatabase) {
 
 // Projetos
 const project = {
-  image: "assets/image/saude.png",
+  image: "assets/images/saude.png",
   title: "Saúde 10 Anos no Futuro",
   subtitle: "Onde estamos e onde podemos ir",
   description:
     "Foi um trabalho de Foresight Thinking desenvolvido na disciplina Pensando Empreendimentos no Futuro em 2018. Coletar sinais, reunir tendências, fazer previsões, criar possibilidades de cenários, construir personas e...",
+  URL: "https://www.instagram.com/biciflowapp/",
 };
 const project2 = {
-  image: "assets/image/acidentesTransitoRecife.png",
+  image: "assets/images/acidentesTransitoRecife.png",
   title: "Acidentes de Trânsito no Recife",
   description:
     "Foi o projeto para a disciplina de Visualização de Dados em 2017. Colocamos em prática conceitos vistos em sala de aula. Para isso utilizamos bases de dados abertas disponíveis pela prefeitura do Recife dos acidentes de trânsito de recife nos anos de 2015 e 2016. Utilizando a biblioteca D3 em JavaScript fiz o histograma.",
+  URL: "https://www.instagram.com/biciflowapp/",
 };
 const project3 = {
-  image: "assets/image/cariri.png",
+  image: "assets/images/cariri.png",
   title: "TCM Cariri Olindense",
   subtitle: "Landing page",
   description:
     "Conhecida como a mais antiga troça de frevo de Olinda, foi fundada em 15 de fevereiro de 1921. Desde 2020, trabalho tanto no design, utilizando as melhores abordagens de Design Thinking, tanto no desenvolvimento Web Front-end com Angular 8.",
+  URL: "https://www.instagram.com/biciflowapp/",
 };
 const projectsDatabase = [project, project2, project3];
 var projectsHTML = document.getElementById("project");
