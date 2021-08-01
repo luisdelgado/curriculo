@@ -91,14 +91,14 @@ const project = {
   subtitle: "Onde estamos e onde podemos ir",
   description:
     "Foi um trabalho de Foresight Thinking desenvolvido na disciplina Pensando Empreendimentos no Futuro em 2018. Coletar sinais, reunir tendências, fazer previsões, criar possibilidades de cenários, construir personas e...",
-  URL: "https://www.instagram.com/biciflowapp/",
+  URL: "assets/files/saude.pdf",
 };
 const project2 = {
   image: "assets/images/acidentesTransitoRecife.png",
   title: "Acidentes de Trânsito no Recife",
   description:
     "Foi o projeto para a disciplina de Visualização de Dados em 2017. Colocamos em prática conceitos vistos em sala de aula. Para isso utilizamos bases de dados abertas disponíveis pela prefeitura do Recife dos acidentes de trânsito de recife nos anos de 2015 e 2016. Utilizando a biblioteca D3 em JavaScript fiz o histograma.",
-  URL: "https://www.instagram.com/biciflowapp/",
+  URL: "https://m4nuela22.github.io/projetoVisualizacao/index.html",
 };
 const project3 = {
   image: "assets/images/cariri.png",
@@ -106,13 +106,15 @@ const project3 = {
   subtitle: "Landing page",
   description:
     "Conhecida como a mais antiga troça de frevo de Olinda, foi fundada em 15 de fevereiro de 1921. Desde 2020, trabalho tanto no design, utilizando as melhores abordagens de Design Thinking, tanto no desenvolvimento Web Front-end com Angular 8.",
-  URL: "https://www.instagram.com/biciflowapp/",
+  URL: "https://caririolindense.org.br/",
 };
 const projectsDatabase = [project, project2, project3];
 var projectsHTML = document.getElementById("project");
 for (element of projectsDatabase) {
   projectsHTML.innerHTML = `${projectsHTML.innerHTML}
-    <div class="wrapper__div div--cardSmall">
+    <div class="wrapper__div div--cardSmall" onClick="redirect('${
+      element.URL
+    }')">
       <img src="${element.image}" alt="${element.title}" style="width:100%">
       <div class="card__container">
           <h4><b>${element.title}</b></h4> 
