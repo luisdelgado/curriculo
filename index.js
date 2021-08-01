@@ -22,10 +22,10 @@ for (element of educationDatabase) {
     <li>
         <h5>${element.title}</h5>
         <span>${element.institution} (${element.period})</span><br>
-        <span>TCC: </span>${
+        ${
           element.url
-            ? `<a class="divCenter__a" href="${element.url}" target="_blank">${element.project}</a>`
-            : `<span>${element.project}</span>`
+            ? `<a class="divCenter__a" href="${element.url}" target="_blank"><i>${element.project}</i></a>`
+            : `<span><i>${element.project}</i></span>`
         }
     </li>`;
 }
